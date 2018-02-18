@@ -1,0 +1,299 @@
+.App {
+  text-align: center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.App-title {
+  font-size: 1.5em;
+}
+.App-intro {
+  font-size: large;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.display {
+    width: 70%;
+    float: right;
+}
+.jbinput {
+    width: 200px;
+    height: 40px;
+    border-width: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+.inline {
+    display: inline-block
+}
+.msubmit {
+      width: 235px;
+      height: 61px;
+      border-radius: 30.5px;
+      background-color: rgb(86, 43, 173);
+      border: none;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 4.75;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color:white;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      transition: 0.3s;
+}
+.msubmit:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.jbresult{
+    padding: 30px;
+    font-size: 15pt;
+    font-family: 'Montserrat', sans-serif;
+}
+.jbresultlink{
+    padding: 30px;
+    font-size: 15pt;
+    color: #66cccc;
+    font-family: 'Montserrat', sans-serif;
+}
+.jbhead{
+    padding: 30px;
+    font-size: 12pt;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+.delet {
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: firebrick;
+    background-color: transparent;
+}
+.delet:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.addnew:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.bluebg {
+    width: 100%;
+    height: auto;
+    background-color: #72d3b1;
+    z-index: -1;
+}
+.redbg {
+    width: 100%;
+    height: auto;
+    background-color: #bc2969;
+    z-index: -1;
+}
+.mimg {
+     vertical-align:middle;
+}
+.margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.title {
+    padding: 30px;
+    font-size: 15pt;
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+}
+.red {
+    padding-left: 30px;
+    font-size: 50pt;
+    color: darkred;
+    font-family: 'Montserrat', sans-serif;
+}
+/*control*/
+.control {
+    background-color: lightgray;
+    width: 30%;
+    height: 100vh;
+    float: left;
+}
+.avt {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+.margin {
+    margin: 50px;
+}
+.subtitle {
+    padding: 10px;
+    font-size: 10pt;
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn1 {
+      width: 235px;
+      height: 61px;
+      border-radius: 30.5px;
+      background-color: #72d3b1;
+      border-color: white;
+      border-width: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 4.75;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color: white;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      transition: 0.3s;
+}
+.btn1:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.btn2 {
+      width: 235px;
+      height: 61px;
+      border-radius: 30.5px;
+      background-color: #bc2969;
+      border-color: white;
+      border-width: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 4.75;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color: white;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      transition: 0.3s;
+}
+.btn2:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.paybtn {
+    background-color: rgb(86, 43, 173);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 30.5px;
+}
+.paybtn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.heroimg {
+    background-image: radial-gradient(white 15%, transparent 16%),
+    radial-gradient(white 15%, transparent 16%);
+    background-size:60px 60px;
+    background-position: 0 0, 30px 30px;
+    background-color: #72d3b1;
+    width: 40%;
+    height: 100vh;
+    float: left;
+}
+.login {
+    background-color: #fff; 
+    background-image: 
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    width: 60%;
+    height: 100vh;
+    float: right;
+}
+.slogan {
+    font-size: 30pt;
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+}
+.logo {
+    width: 300px;
+    height: auto;
+}
+.margin2 {
+    margin: 100px;
+}
+.googlebtn {
+      width: 235px;
+      height: 61px;
+      border-radius: 30.5px;
+      background-color: #bc2969;
+      border-color: white;
+      border-width: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 4.75;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color: white;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      transition: 0.3s;
+}
+.googlebtn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.facebookbtn {
+    width: 235px;
+      height: 61px;
+      border-radius: 30.5px;
+      background-color: #72d3b1;
+      border-color: white;
+      border-width: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 4.75;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color: white;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      transition: 0.3s;
+}
+.facebookbtn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
