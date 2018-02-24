@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import '../../App.css';
+import PayButton from './PayButton';
 
 
 class Pay extends Component {
     
-  render() {
-      
+    //paypal api button
     
-      
-    return (
-      <div className="display">
-        <div className="margin">
-            <div className="title">PAYMENT</div>
-            <div className="red">{this.props.mJobBank[this.props.mIndex].money} CAD</div>
-            <div className="title">PAYMENT TO</div>
-            <div className="red">{this.props.mJobBank[this.props.mIndex].name}</div>
-            <hr/>
-            <br/>
-            <div>PAY WITH</div>
-            <button>PayPal</button>
-        </div>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="display">
+                <div className="margin">
+                    <div className="title">PAYMENT</div>
+                    <div className="red">{this.props.mJobBank[this.props.mIndex].money} CAD</div>
+                    <div className="title">PAYMENT TO</div>
+                    <div className="red">{this.props.mJobBank[this.props.mIndex].name}</div>
+                    <hr/>
+                    <br/>
+                    <div>PAY WITH</div>
+                    <PayButton />
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Pay;

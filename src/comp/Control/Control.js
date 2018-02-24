@@ -19,10 +19,12 @@ class Fom extends Component {
                     <br/><br/>
                     <div className="subtitle">{this.props.faceinfo.fbName}</div>
                     <div className="subtitle">{this.props.faceinfo.fbemail}</div>
+                    <button className="btn3" onClick={this.props.logoutDisplay}>LOG OUT</button><br/>
                     <hr/>
                     <br/><br/>
-                    <button onClick={this.props.showfom} className="btn1">FRIENDS OWN ME</button><br/>
-                    <button onClick={this.props.showmof} className="btn2">FRIENDS I OWN</button>
+                    <button onClick={this.props.showfom} className="btn1">FRIENDS OWE ME</button><br/>
+                    <button onClick={this.props.showmof} className="btn2">FRIENDS I OWE</button><br/>
+                    
                     </div>
                 </div>
             )
@@ -35,10 +37,11 @@ class Fom extends Component {
                         <br/><br/>
                         <div className="subtitle">{this.props.googleinfo.gooName}</div>
                         <div className="subtitle">{this.props.googleinfo.gooemail}</div>
+                        <button  className="btn3" onClick={this.props.logoutDisplay}>LOG OUT</button><br/>
                         <hr/>
                         <br/><br/>
-                        <button onClick={this.props.showfom} className="btn1">FRIENDS OWN ME</button><br/>
-                        <button onClick={this.props.showmof} className="btn2">FRIENDS I OWN</button>
+                        <button onClick={this.props.showfom} className="btn1">FRIENDS OWE ME</button><br/>
+                        <button onClick={this.props.showmof} className="btn2">FRIENDS I OWE</button>
                     </div>
                 </div>
             )

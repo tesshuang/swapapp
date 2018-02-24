@@ -132,7 +132,7 @@
 .control {
     background-color: lightgray;
     width: 30%;
-    height: 100vh;
+    height: 100%;
     float: left;
 }
 .avt {
@@ -198,6 +198,32 @@
       transition: 0.3s;
 }
 .btn2:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.btn3 {
+      width: 180px;
+      height: 40px;
+      border-radius: 30.5px;
+      background-color: rgb(86, 43, 173);
+      border-color: white;
+      border-width: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 3;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color: white;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      transition: 0.3s;
+}
+.btn3:hover {
     opacity: 0.5;
     cursor: pointer;
 }

@@ -39,7 +39,10 @@ class App extends Component {
             gootoggle:false,
             viewtoggle:false
         }
+        
+        this.logoutDisplay = this.logoutDisplay.bind(this);
         this.fbLogin = this.fbLogin.bind(this);
+        this.userLogout = this.userLogout.bind(this); 
         
     }
     
@@ -54,7 +57,11 @@ class App extends Component {
         })();    
     }
     
-
+    logoutDisplay(){
+        this.setState({
+            viewtoggle:false
+        })
+    }
     
     googleLogin = () => {
         let response = null;
@@ -145,8 +152,15 @@ class App extends Component {
         })
     }
 
+    userLogout(){
+        fetch("http://tesshuangxj.com/swapapp/logout.php",{
+                method:"GET"
+            })
+    }
+
+
     render() {
-        console.log("Hi",this.state.googleinfo.gooName.length)
+        console.log("Hi",this.state.googleinfo.gooName.length);
         console.log(this.state.faceinfo.fbName,this.state.gooImg, this.state.gooemail);
         var comp =null;
         if(this.state.viewtoggle ===  false){
@@ -164,6 +178,8 @@ class App extends Component {
                     facetoggle={this.state.facetoggle}
                     googleinfo={this.state.googleinfo}
                     gootoggle={this.state.gootoggle}
+                    logoutDisplay={this.logoutDisplay}
+                    userLogout={this.userLogout}
                     />
             )
             

@@ -4,112 +4,37 @@ import '../../App.css';
 
 class Fom extends Component {
   constructor(props){
-      super(props)
+      super(props);
       
-      this.state = {
-          mJobBank:[],
-          titleInput:"",
-          moneyInput:"",
-          nameInput:"",
-          showInput:false,
-      }
-      
-      this.pushItem = this.pushItem.bind(this);
-      this.sliceItem = this.sliceItem.bind(this);
-      this.inputChange1 = this.inputChange1.bind(this);
-      this.inputChange2 = this.inputChange2.bind(this);
-      this.inputChange4 = this.inputChange4.bind(this);
-      this.clickAdd = this.clickAdd.bind(this);
-      this.mshow = this.mshow.bind(this);
-      this.mhide = this.mhide.bind(this);
-      this.handleChange = this.handleChange.bind(this);
+      this.readIndex = this.readIndex.bind(this);
   }
     
+    readIndex(i){
+      this.props.findIndex(i);
+      this.props.displayDP(true);
+      console.log(this.props.mJobBank2);
+    }
     
- handleChange(date) {
-    this.setState({
-      startDate: date
-    });
-  }
+    //delete user info in the database
+    
 
-clickAdd(arg){
-    var bool = arg;
-    this.setState({
-        showInput:bool
-    })
-}
-    
-mshow(){
-    this.clickAdd(true)
-}
-
-mhide(){
-    this.clickAdd(false)
-}
-    
-inputChange1(evt){
-    var iTitle = evt.target.value;
-    this.setState({
-        titleInput:iTitle
-    })
-}
-    
-inputChange2(evt){
-    var iMoney = evt.target.value;
-    this.setState({
-        moneyInput:iMoney
-    })
-}
-    
-    
-inputChange4(evt){
-    var iName = evt.target.value;
-    this.setState({
-        nameInput:iName
-    })
-}
-    
-pushItem(){
-    var temp = this.state.mJobBank;
-    var mobj = {
-        title:this.state.titleInput, 
-        money:this.state.moneyInput,
-        name:this.state.nameInput,
-        link:this.state.linkInput};
-    temp.push(mobj);
-    
-    this.setState({
-        mJobBank:temp
-    });
-    
-    console.log(temp);
-}
-    
-    
-  sliceItem(i){
-      var temp = this.state.mJobBank;
-      temp.splice(i,1);
-      this.setState({
-          mJobBank:temp
-      })
-  }
     
   render() {
-    var all = this.state.mJobBank.map((obj,index)=>{
+    var all = this.props.mJobBank2.map((obj,index)=>{
         return(
             <div key={index}>
                 <p>
-                    <span className="jbresult">{obj.title}</span>
+                    <span className="jbresult">{obj.reason}</span>
                     <span className="jbresult">{obj.money}</span>
                     <span className="jbresult">{obj.name}</span>
-                    <button className="paybtn" onClick={this.sliceItem.bind(this,index)}>PAID</button>
+                    <button className="paybtn" onClick={this.readIndex.bind(this,index)}>PAID</button>
                 </p>
             </div>
         )
     })
     
     var mjb = null;
-    if(this.state.mJobBank.length == 0){
+    if(this.props.mJobBank2.length == 0){
         mjb=
             <div className="title">You have no track saved yet</div>
     }else{
@@ -118,12 +43,12 @@ pushItem(){
     }
     
     var comp = null;
-    if(this.state.showInput == false){
+    if(this.props.showInput == false){
         comp = 
        <div className="App">
         <div className="bluebg">
              <br/><br/>
-             <div className="title">FRIENDS OWN ME</div>
+             <div className="title">FRIENDS OWE ME</div>
              <br/>
              <div>
                 <span className="jbhead"><b>FOR WHAT</b></span>
@@ -136,7 +61,7 @@ pushItem(){
         <div className="margin">
                 <span>+</span>
                 &nbsp;
-                <span className="addnew" onClick={this.mshow}><b>ADD NEW</b></span>
+                <span className="addnew" onClick={this.props.mshow}><b>ADD NEW</b></span>
         </div>
        </div>
     }else{
@@ -144,7 +69,7 @@ pushItem(){
       <div className="App">
         <div className="bluebg">
             <br/><br/>
-            <div className="title">FRIENDS OWN ME</div>
+            <div className="title">FRIENDS OWE ME</div>
             <br/>
             <div>
                 <span className="jbhead"><b>FOR WHAT</b></span>
@@ -158,17 +83,17 @@ pushItem(){
             <div className="margin">
                 <span>+</span>
                 &nbsp;
-                <span className="addnew" onClick={this.mshow}><b>ADD NEW</b></span>
+                <span className="addnew" onClick={this.props.mshow}><b>ADD NEW</b></span>
             </div>
             <div>
                 <br/><br/>
-                <input className="jbinput" onChange={this.inputChange1} type="text" placeholder="FOR WHAT"/>
-                <input className="jbinput" onChange={this.inputChange2} type="text" placeholder="MONEY"/>
-                <input className="jbinput" onChange={this.inputChange4} type="text" placeholder="NAME"/>
+                <input className="jbinput" onChange={this.props.inputChange4} type="text" placeholder="FOR WHAT"/>
+                <input className="jbinput" onChange={this.props.inputChange5} type="text" placeholder="MONEY"/>
+                <input className="jbinput" onChange={this.props.inputChange6} type="text" placeholder="NAME"/>
                 <br/><br/>
-                <button className="msubmit" onClick={this.pushItem}>SAVE</button>
+                <button className="msubmit" onClick={this.props.pushItemL}>SAVE</button>
                 <br/>
-                <button onClick={this.mhide} className="delet">× CANCLE</button>
+                <button onClick={this.props.mhide} className="delet">× CANCEL</button>
                 <br/><br/>
             </div>
         </div>
