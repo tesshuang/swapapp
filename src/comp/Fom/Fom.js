@@ -6,14 +6,10 @@ class Fom extends Component {
   constructor(props){
       super(props);
       
-      this.readIndex = this.readIndex.bind(this);
   }
     
-    readIndex(i){
-      this.props.findIndex(i);
-      this.props.displayDP(true);
-      console.log(this.props.mJobBank2);
-    }
+
+    
     
     //delete user info in the database
     
@@ -27,7 +23,7 @@ class Fom extends Component {
                     <span className="jbresult">{obj.reason}</span>
                     <span className="jbresult">{obj.money}</span>
                     <span className="jbresult">{obj.name}</span>
-                    <button className="paybtn" onClick={this.readIndex.bind(this,index)}>PAID</button>
+                    <button className="paybtn" onClick={this.props.sliceItem.bind(this,index)}>PAID</button>
                 </p>
             </div>
         )

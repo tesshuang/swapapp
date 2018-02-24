@@ -36,7 +36,7 @@ class InnerFace extends Component {
 
         this.pushItemB = this.pushItemB.bind(this);
         this.pushItemL = this.pushItemL.bind(this);
-        /*this.sliceItem = this.sliceItem.bind(this);*/
+        this.sliceItem = this.sliceItem.bind(this);
         this.inputChange1 = this.inputChange1.bind(this);
         this.inputChange2 = this.inputChange2.bind(this);
         this.inputChange3 = this.inputChange3.bind(this);
@@ -180,7 +180,16 @@ class InnerFace extends Component {
             this.setState({
                 nameInput2:evt.target.value
             })
-        }    
+        }
+        
+        
+        sliceItem(i){
+          var temp = this.state.mJobBank2;
+          temp.splice(i,1);
+          this.setState({
+              mJobBank2:temp
+          });
+      }
 
         pushItemB(){
             var temp = this.state.mJobBank;
@@ -267,8 +276,7 @@ class InnerFace extends Component {
                         mshow={this.mshow}
                         mhide={this.mhide}
                         showInput={this.state.showInput}
-                        displayDP={this.displayDP}
-                        findIndex={this.findIndex}
+                        sliceItem={this.sliceItem}
                         total={this.state.total}
                         mJobBank2={this.state.mJobBank2}
                         pushItemL={this.pushItemL}/>
