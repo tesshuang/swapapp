@@ -104,11 +104,10 @@
     z-index: -1;
 }
 .redbg {
-    width: 70vw;
+    width: 100%;
     height: auto;
     background-color: #bc2969;
     z-index: -1;
-    margin-left: -15px;
 }
 .mimg {
      vertical-align:middle;
@@ -133,9 +132,8 @@
 .control {
     background-color: lightgray;
     width: 30%;
-    height: 100vh;
+    height: 100%;
     float: left;
-    position: relative;
 }
 .avt {
     width: 100px;
@@ -262,14 +260,12 @@
     float: right;
 }
 .slogan {
-    /*font-size: 20pt;*/
-    padding-top: 10px;
+    font-size: 30pt;
     color: #212121;
     font-family: 'Montserrat', sans-serif;
 }
 .logo {
     width: 300px;
-    margin:15px;
     height: auto;
 }
 .margin2 {
@@ -326,45 +322,4 @@
 .facebookbtn:hover {
     opacity: 0.5;
     cursor: pointer;
-}
-.paddLogin{
-    paddding:100px;
-}
-.padTop {
-    padding-top: 120px;
-}
-.MainContainer {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    float:left;
-}
-.navColor {
-    background-color: #72d3b1;
-    /*background-color: #21754f;*/
-    padding: 5px;
-    margin-left: -20px;
-    margin-bottom:0;
-    width: 100vw;
-    height: auto;
-    margin-right: -20px;
-    box-shadow: 0px 2px rgba(0, 0, 0, .5);
-    position:fixed;
-    z-index:1;
-}
-.logoNav {
-    margin-top:10px;
-    width: 80px;
-}
-.rowLogin {
- width: 100vw;
-}
-.margControl {
-    margin-left: -15px;
-}
-.dControl {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    text-align: center;
 }
