@@ -3,7 +3,10 @@ import Fom from './comp/Fom/Fom.js';
 import Mof from './comp/Mof/Mof.js';
 import Control from './comp/Control/Control.js';
 import Pay from './comp/Pay/Pay.js';
-
+import logo2 from './img/logo-white.png';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Container, Row, Col } from 'reactstrap';
+import { Navbar, NavbarBrand } from 'reactstrap';
 
 class InnerFace extends Component {
     constructor(props){
@@ -307,8 +310,13 @@ class InnerFace extends Component {
         
         
         return (
-          <div>
-            <Control 
+        <Container className="MainContainer App">
+            <Navbar className="navColor" color="#bc2969" light expand="md">
+                <NavbarBrand className="mr-auto"><img  className="logoNav" src={logo2}/></NavbarBrand>
+            </Navbar>
+          <Row className="rowLogin">
+            <Col>  
+            <Control
                    changeDisplay={this.changeDisplay}
                    showfom={this.showfom}
                    showmof={this.showmof}
@@ -320,7 +328,9 @@ class InnerFace extends Component {
                     
                     />
             {comp}
-          </div>
+            </Col>
+          </Row>
+          </Container>
         );
     }
   }
