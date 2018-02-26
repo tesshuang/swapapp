@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../../App.css';
 import PayButton from './PayButton';
 
-
 class Pay extends Component {
     
     //paypal api button
@@ -18,7 +17,7 @@ class Pay extends Component {
                     <hr/>
                     <br/>
                     <div>PAY WITH</div>
-                    <PayButton />
+                    <PayButton amount={this.props.mJobBank[this.props.mIndex].money}/>
                 </div>
             </div>
         );

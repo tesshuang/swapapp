@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import PaypalExpressBtn from 'react-paypal-express-checkout';
 
 class PayButton extends Component {
-  render() {		
+    constructor(props){
+        super(props);
+        
+
+    }
+  render() {
+        console.log(this.props.amount);
 		const onSuccess = (payment) => {
 			// Congratulation, it came here means everything's fine!
             		console.log("The payment was succeeded!", payment);
@@ -15,6 +21,7 @@ class PayButton extends Component {
 		const onCancel = (data) => {
 			// User pressed "cancel" or close Paypal's popup!
 			console.log('The payment was cancelled!', data);
+            console.log('hi');
 			// You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
 		}	
 		
@@ -26,8 +33,9 @@ class PayButton extends Component {
 		}			
 			
 		let env = 'sandbox'; // you can set here to 'production' for production
-		let currency = 'USD'; // or you can set this value from your props or state  
-		let total = 1; // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
+		let currency = 'CAD'; // or you can set this value from your props or state  
+		let total = 1; 
+        var newamount = Number(this.props.amount);// same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
 		// Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
 		
 		const client = {
@@ -43,7 +51,7 @@ class PayButton extends Component {
 		// NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!		  
         return (
             <div>
-            <PaypalExpressBtn client={client} currency={'USD'} total={1.00} />
+            <PaypalExpressBtn client={client} currency={'CAD'} total={newamount} />
             </div>
         );
     }
