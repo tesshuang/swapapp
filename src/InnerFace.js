@@ -28,7 +28,9 @@ class InnerFace extends Component {
                 
                 showInput:false,
                 total:0,
-                mIndex:0
+                mIndex:0,
+            
+                showPop:false
             
         }
         this.changeDisplay = this.changeDisplay.bind(this);
@@ -54,6 +56,7 @@ class InnerFace extends Component {
         this.findIndex = this.findIndex.bind(this);
         this.logoutDisplay = this.logoutDisplay.bind(this);
         
+        this.hidePop = this.hidePop.bind(this);
     }
     
     componentDidMount(){
@@ -190,7 +193,15 @@ class InnerFace extends Component {
           var temp = this.state.mJobBank2;
           temp.splice(i,1);
           this.setState({
-              mJobBank2:temp
+              mJobBank2:temp,
+              showPop:true
+          });
+      }
+    
+    
+      hidePop(){
+          this.setState({
+              showPop:false
           });
       }
 
@@ -282,7 +293,10 @@ class InnerFace extends Component {
                         sliceItem={this.sliceItem}
                         total={this.state.total}
                         mJobBank2={this.state.mJobBank2}
-                        pushItemL={this.pushItemL}/>
+                        pushItemL={this.pushItemL}
+                        showPop={this.state.showPop}
+                        hidePop={this.hidePop}
+                        displayPop={this.displayPop}/>
                 </div>
         }else{
             comp = 

@@ -68,7 +68,7 @@ class Fom extends Component {
              <br/><br/>
         </div>
         <div className="margin">
-                <span>+</span>
+                <span className="addnew">+</span>
                 &nbsp;
                 <span className="addnew" onClick={this.props.mshow}><b>ADD NEW</b></span>
         </div>
@@ -90,7 +90,7 @@ class Fom extends Component {
         </div>
         <div>
             <div className="margin">
-                <span>+</span>
+                <span className="addnew">+</span>
                 &nbsp;
                 <span className="addnew" onClick={this.props.mshow}><b>ADD NEW</b></span>
             </div>
