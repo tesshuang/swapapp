@@ -98,10 +98,11 @@
     opacity: 0.5;
 }
 .bluebg {
-    width: 100%;
-    height: auto;
-    background-color: #72d3b1;
-    z-index: -1;
+   width: 70vw;
+   height: auto;
+   background-color: #72d3b1;
+   z-index: -1;
+   margin-left: -15px;
 }
 .redbg {
     width: 70vw;
@@ -328,7 +329,7 @@
     cursor: pointer;
 }
 .paddLogin{
-    paddding:100px;
+    padding:100px;
 }
 .padTop {
     padding-top: 120px;
