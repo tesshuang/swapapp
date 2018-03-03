@@ -40,8 +40,8 @@
     display: inline-block
 }
 .msubmit {
-      width: 235px;
-      height: 61px;
+      width: 30%;
+      height: 3%;
       border-radius: 30.5px;
       background-color: rgb(86, 43, 173);
       border: none;
@@ -103,14 +103,14 @@
     opacity: 0.5;
 }
 .bluebg {
-   width: 70vw;
+   width: 72vw;
    height: auto;
    background-color: #72d3b1;
    z-index: -1;
    margin-left: -15px;
 }
 .redbg {
-    width: 70vw;
+    width: 72vw;
     height: auto;
     background-color: #bc2969;
     z-index: -1;
@@ -158,8 +158,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 .btn1 {
-      width: 235px;
-      height: 61px;
+      width: 70%;
+      height: 3%;
       border-radius: 30.5px;
       background-color: #72d3b1;
       border-color: white;
@@ -184,8 +184,8 @@
     cursor: pointer;
 }
 .btn2 {
-      width: 235px;
-      height: 61px;
+      width: 70%;
+      height: 3%;
       border-radius: 30.5px;
       background-color: #bc2969;
       border-color: white;
@@ -210,8 +210,8 @@
     cursor: pointer;
 }
 .btn3 {
-      width: 180px;
-      height: 40px;
+      width: 50%;
+      height: 3%;
       border-radius: 30.5px;
       background-color: rgb(86, 43, 173);
       border-color: white;
@@ -265,7 +265,7 @@
     background-size: 100% 1.2em;
     width: 60%;
     height: 100vh;
-    float: right;
+
 }
 .slogan {
     /*font-size: 20pt;*/
@@ -349,7 +349,7 @@
     background-color: #72d3b1;
     /*background-color: #21754f;*/
     padding: 5px;
-    margin-left: -20px;
+    margin-left: -18px;
     margin-bottom:0;
     width: 100vw;
     height: auto;
