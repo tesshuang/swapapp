@@ -5,34 +5,41 @@ class PayButton extends Component {
     constructor(props){
         super(props);
         
-
+        this.paySuccess = this.paySuccess.bind(this);
+        
     }
-  render() {
-        console.log(this.props.amount);
-		const onSuccess = (payment) => {
+    paySuccess(i){
+        this.props.paySuccess(i);
+    }
+    
+    onSuccess = (payment, i) => {
 			// Congratulation, it came here means everything's fine!
             		console.log("The payment was succeeded!", payment);
                     if(payment.paid === true){
                         console.log("delete local users.");
+                        this.paySuccess();
                     }
             		// You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
 		}		
 		
-		const onCancel = (data) => {
+    onCancel = (data) => {
 			// User pressed "cancel" or close Paypal's popup!
 			console.log('The payment was cancelled!', data);
             console.log('hi');
 			// You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
 		}	
 		
-		const onError = (err) => {
+    onError = (err) => {
 			// The main Paypal's script cannot be loaded or somethings block the loading of that script!
 			console.log("Error!", err);
 			// Because the Paypal's main script is loaded asynchronously from "https://www.paypalobjects.com/api/checkout.js"
 			// => sometimes it may take about 0.5 second for everything to get set, or for the button to appear			
 		}			
 			
-		let env = 'sandbox'; // you can set here to 'production' for production
+    
+  render() {
+        console.log(this.props.amount);
+        let env = 'sandbox'; // you can set here to 'production' for production
 		let currency = 'CAD'; // or you can set this value from your props or state  
 		let total = 1; 
         var newamount = Number(this.props.amount);// same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
@@ -48,10 +55,10 @@ class PayButton extends Component {
 		// For production app-ID:
 		//   => https://developer.paypal.com/docs/classic/lifecycle/goingLive/		
 		
-		// NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!		  
+		// NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!
         return (
             <div>
-            <PaypalExpressBtn client={client} currency={'CAD'} total={newamount} />
+            <PaypalExpressBtn client={client} currency={'CAD'} total={newamount} onSuccess={this.onSuccess} />
             </div>
         );
     }

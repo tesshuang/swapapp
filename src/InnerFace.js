@@ -57,6 +57,7 @@ class InnerFace extends Component {
         this.logoutDisplay = this.logoutDisplay.bind(this);
         
         this.hidePop = this.hidePop.bind(this);
+        this.paySuccess = this.paySuccess.bind(this);
     }
     
     componentDidMount(){
@@ -269,7 +270,18 @@ class InnerFace extends Component {
             this.props.userLogout();
         }
     
-
+        paySuccess(i){
+         console.log("paySuccess");
+          var temp = this.state.mJobBank;
+            i = this.state.mIndex; 
+          temp.splice(i,1);
+              this.setState({
+                  mJobBank:temp,
+                  showFom:false,
+                  displayPay:false
+              });
+          
+        }
     
     render(){
         var comp = null;
@@ -278,6 +290,7 @@ class InnerFace extends Component {
                      <Pay 
                         mJobBank={this.state.mJobBank}
                         mIndex={this.state.mIndex}
+                        paySuccess={this.paySuccess}
                         />
                    </div>
         }else if(this.state.showFom == true){
