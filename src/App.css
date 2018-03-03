@@ -104,12 +104,10 @@
 .bluebg {
    background-color: #72d3b1;
    z-index: -1;
-   margin-left: -15px;
 }
 .redbg {
     background-color: #bc2969;
     z-index: -1;
-    margin-left: -15px;
 }
 .mimg {
      vertical-align:middle;
