@@ -203,8 +203,8 @@
     cursor: pointer;
 }
 .btn3 {
-      width: 50%;
-      height: 3%;
+      width: 60%;
+      height: 25%;
       border-radius: 30.5px;
       background-color: rgb(86, 43, 173);
       border-color: white;
@@ -365,6 +365,7 @@
     margin-left: 0px;
 }
 .dControl {
+    background-color: lightgray;
     position: absolute;
     width: 100%;
     text-align: center;
