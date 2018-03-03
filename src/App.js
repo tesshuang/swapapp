@@ -28,13 +28,15 @@ class App extends Component {
             faceinfo:{
                 fbName:"",
                 fbImg:"",
-                fbemail:""
+                fbemail:"",
+                fbid:0
             },
             facetoggle:false,
             googleinfo:{
                gooName:"",
                 gooImg:"",
-                gooemail:"" 
+                gooemail:"",
+                gooid:0 
             },
             gootoggle:false,
             viewtoggle:false
@@ -109,7 +111,8 @@ class App extends Component {
                     googleinfo:{
                        gooName:e.displayName,
                         gooImg:e.image.url,
-                        gooemail:e.emails[0].value
+                        gooemail:e.emails[0].value,
+                        gooid:e.id
                     },
                     gootoggle:true,
                     viewtoggle:true
@@ -140,7 +143,8 @@ class App extends Component {
                         faceinfo:{
                             fbName:json.name,
                             fbImg:json.picture.data.url,
-                            fbemail:json.email
+                            fbemail:json.email,
+                            fbid:json.id
                         },
                         facetoggle: true,
                         viewtoggle:true

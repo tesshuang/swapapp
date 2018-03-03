@@ -67,8 +67,9 @@ class InnerFace extends Component {
             fd.append("name", this.props.faceinfo.fbName);
             fd.append("image", this.props.faceinfo.fbImg);
             fd.append("email", this.props.faceinfo.fbemail);
+            fd.append("id", this.props.faceinfo.fbid);
 
-            fetch("http://tesshuangxj.com/swapapp/faceinsert.php", {
+            fetch("http://tesshuangxj.com/swapapp/newfaceinsert.php", {
                 method:"POST",
                 body:fd
             });
@@ -85,9 +86,9 @@ class InnerFace extends Component {
             fd.append("name", this.props.googleinfo.gooName);
             fd.append("image", this.props.googleinfo.gooImg);
             fd.append("email", this.props.googleinfo.gooemail);
-
+            fd.append("id", this.props.googleinfo.gooid);
           
-            fetch("http://tesshuangxj.com/swapapp/googleinsert2.php", {
+            fetch("http://tesshuangxj.com/swapapp/googleinsert.php", {
                 method:"POST",
                 body:fd
             });
