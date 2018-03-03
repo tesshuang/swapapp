@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container, Row, Col} from 'reactstrap';
+import logo from '../../img/logo-white.png';
+import { Container, Row, Col, Button} from 'reactstrap';
 
 class Fom extends Component {
   constructor(props){
@@ -14,6 +15,7 @@ class Fom extends Component {
         if(this.props.facetoggle === true){
             comp =(
                 <div className="control margControl">
+                    <img className="logoControl" src={logo}/>
                     <div className="dControl">
                     <div className="title">PROFILE</div>
                     <img className="avt" src={this.props.faceinfo.fbImg}/>
@@ -23,14 +25,15 @@ class Fom extends Component {
                     <button className="btn3" onClick={this.props.logoutDisplay}>LOG OUT</button><br/>
                     <hr/>
                     <br/><br/>
-                    <button onClick={this.props.showfom} className="btn1">FRIENDS OWE ME</button><br/>
-                    <button onClick={this.props.showmof} className="btn2">FRIENDS I OWE</button><br/>
+                    <Button onClick={this.props.showfom} className="btn1">FRIENDS OWE ME</Button><br/>
+                    <Button onClick={this.props.showmof} className="btn2">FRIENDS I OWE</Button><br/>
                     </div>
                 </div>
             )
         } else if(this.props.gootoggle === true){
             comp =(
                     <div className="control margControl">
+                        <img className="logoControl" src={logo}/>
                         <div className="dControl">
                         <div className="title">PROFILE</div>
                         <img className="avt" src={this.props.googleinfo.gooImg}/>

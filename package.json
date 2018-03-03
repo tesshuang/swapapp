@@ -8,6 +8,7 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-paypal-express-checkout": "^1.0.3",
+    "react-responsive-sidebar": "^0.1.16",
     "react-scripts": "1.1.1",
     "reactstrap": "^5.0.0-beta"
   },

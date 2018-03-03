@@ -15,7 +15,7 @@ class Login extends Component {
     return (             
             <Container className="MainContainer App">
             <Navbar className="navColor">
-              <NavbarBrand className="mr-auto"><img  className="logoNav" src={logo2}/></NavbarBrand>
+              <NavbarBrand className="mr-auto"></NavbarBrand>
             </Navbar>
               <Row className="rowLogin">                   
                   <Col className="login">

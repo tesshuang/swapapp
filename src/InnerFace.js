@@ -5,8 +5,8 @@ import Control from './comp/Control/Control.js';
 import Pay from './comp/Pay/Pay.js';
 import logo2 from './img/logo-white.png';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container, Row, Col } from 'reactstrap';
-import { Navbar, NavbarBrand } from 'reactstrap';
+import { Container, Row, Col, Navbar, NavbarBrand } from 'reactstrap';
+import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
 
 class InnerFace extends Component {
     constructor(props){
@@ -67,9 +67,8 @@ class InnerFace extends Component {
             fd.append("name", this.props.faceinfo.fbName);
             fd.append("image", this.props.faceinfo.fbImg);
             fd.append("email", this.props.faceinfo.fbemail);
-            fd.append("id", this.props.faceinfo.fbid);
 
-            fetch("http://tesshuangxj.com/swapapp/newfaceinsert.php", {
+            fetch("http://tesshuangxj.com/swapapp/faceinsert.php", {
                 method:"POST",
                 body:fd
             });
@@ -86,9 +85,9 @@ class InnerFace extends Component {
             fd.append("name", this.props.googleinfo.gooName);
             fd.append("image", this.props.googleinfo.gooImg);
             fd.append("email", this.props.googleinfo.gooemail);
-            fd.append("id", this.props.googleinfo.gooid);
+
           
-            fetch("http://tesshuangxj.com/swapapp/googleinsert.php", {
+            fetch("http://tesshuangxj.com/swapapp/googleinsert2.php", {
                 method:"POST",
                 body:fd
             });
@@ -335,30 +334,24 @@ class InnerFace extends Component {
                     </div>
             }
         
-        
-        
+            const items = [
+                <Control
+                changeDisplay={this.changeDisplay}
+                showfom={this.showfom}
+                showmof={this.showmof}
+                 faceinfo={this.props.faceinfo}
+                 facetoggle={this.props.facetoggle}
+                 googleinfo={this.props.googleinfo}
+                 gootoggle={this.props.gootoggle}
+                 logoutDisplay={this.logoutDisplay}
+                 
+                 />
+              ];
+
         return (
-        <Container className="MainContainer App">
-            <Navbar className="navColor" color="#bc2969" light expand="md">
-                <NavbarBrand className="mr-auto"><img  className="logoNav" src={logo2}/></NavbarBrand>
-            </Navbar>
-          <Row className="rowLogin">
-            <Col>  
-            <Control
-                   changeDisplay={this.changeDisplay}
-                   showfom={this.showfom}
-                   showmof={this.showmof}
-                    faceinfo={this.props.faceinfo}
-                    facetoggle={this.props.facetoggle}
-                    googleinfo={this.props.googleinfo}
-                    gootoggle={this.props.gootoggle}
-                    logoutDisplay={this.logoutDisplay}
-                    
-                    />
-            {comp}
-            </Col>
-          </Row>
-          </Container>
+        <Sidebar content={items}>
+             {comp}
+          </Sidebar>
         );
     }
   }
