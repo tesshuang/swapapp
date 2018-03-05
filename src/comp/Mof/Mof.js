@@ -46,7 +46,7 @@ class Fom extends Component {
                 {all}
                 <hr/>
                 <br/>
-                <div>TOTAL: {this.props.total}</div>
+                
             </div>
     }
     
