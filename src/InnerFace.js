@@ -88,7 +88,7 @@ class InnerFace extends Component {
             fd.append("email", this.props.googleinfo.gooemail);
             fd.append("id", this.props.googleinfo.gooid);
           
-            fetch("http://tesshuangxj.com/swapapp/googleinsert.php", {
+            fetch("http://tesshuangxj.com/swapapp/googleinsert2.php", {
                 method:"POST",
                 body:fd
             });
@@ -249,19 +249,19 @@ class InnerFace extends Component {
                 mJobBank2:temp  
             });
 
-            /*var fd = new FormData();
+            var fd = new FormData();
 
             fd.append("name", mobj.name);
             fd.append("amount", mobj.money);
             fd.append("reason", mobj.reason);
 
 
-            fetch("http://tesshuangxj.com/swapapp/usrborrow.php", {
+            fetch("http://tesshuangxj.com/swapapp/usrlend.php", {
                 method:"POST",
                 body:fd,
                 credentials:"same-origin"
 
-            });*/
+            });
 
             console.log(temp);
         }
